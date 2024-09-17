@@ -52,5 +52,19 @@ namespace Tech_Test_Backend.Controllers
             else
                 return Unauthorized(token);
         }
+
+        [Authorize]  // Require authentication
+        [HttpGet("WhoAmI")]
+        public async Task<IActionResult> WhoAmI()
+        {
+            var userIdentity = await _authService.WhoAmIAsync();
+            if (userIdentity == null)
+            {
+                return NotFound("User not found");
+            }
+
+            return Ok(userIdentity);
+        }
+
     }
 }
