@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Tech_Test_Backend.Controllers
@@ -28,6 +29,12 @@ namespace Tech_Test_Backend.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        [Authorize]
+        [HttpGet("SecureEndpoint")]
+        public IActionResult GetSecureEndpoint()
+        {
+            return Ok("This is a secure connection!");
         }
     }
 }
