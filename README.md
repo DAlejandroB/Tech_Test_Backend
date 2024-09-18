@@ -40,7 +40,7 @@ The user model is used to handle authentication and user management within the a
 - **Swagger Documentation:** The API is documented using Swagger, making it easy to explore and test endpoints.
 
 ## Technologies Used
-- **.NET 7**: The backend framework used to build the API.
+- **.NET 6**: The backend framework used to build the API.
 - **MongoDB**: A NoSQL database used to store users and provider information.
 - **JWT (JSON Web Tokens)**: Used for user authentication.
 - **Swagger**: Provides API documentation and a user-friendly interface to test the endpoints.
