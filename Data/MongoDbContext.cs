@@ -13,8 +13,8 @@ namespace Tech_Test_Backend.Data
             _database = client.GetDatabase("Tech_Test_BackendDB");
         }
 
-        public IMongoCollection<User> Users => _database.GetCollection<User>("Users");
+        public virtual IMongoCollection<User> Users => _database.GetCollection<User>("Users");
         public IMongoCollection<IdentityRole<Guid>> Roles => _database.GetCollection<IdentityRole<Guid>>("Roles");
-        public IMongoCollection<Provider> Providers => _database.GetCollection<Provider>("Providers");
+        public virtual IMongoCollection<Provider> Providers => _database.GetCollection<Provider>("Providers");
     }
 }

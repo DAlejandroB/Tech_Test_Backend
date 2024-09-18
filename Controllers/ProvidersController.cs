@@ -57,7 +57,7 @@ namespace Tech_Test_Backend.Controllers
             }
             catch
             {
-                // Handle excpetion TODO
+                // Handle exception TODO
                 throw;
             }
         }
