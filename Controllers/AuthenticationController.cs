@@ -19,12 +19,6 @@ namespace Tech_Test_Backend.Controllers
             _authService = authService;
         }
 
-        [HttpPost(Name = "Login")]
-        public IActionResult Login(string returnUrl)
-        {
-            return Ok();
-        }
-
         [HttpPost("Register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
         {
